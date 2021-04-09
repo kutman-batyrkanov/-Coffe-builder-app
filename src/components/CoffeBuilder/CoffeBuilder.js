@@ -6,6 +6,7 @@ import axios from "axios";
 
 const CoffeBuilder = () => {
     const [ingredients, setIngredients] = useState({});
+    const [price, setPrice] = useState(0)
     const prices = {
         americano: 50,
         cappuccino: 70,
@@ -14,9 +15,10 @@ const CoffeBuilder = () => {
         coldcofee: 50,
     }
     useEffect (() => {
-        axios.get("https://builder-57473-default-rtdb.firebaseio.com/.default.json")
+        axios.get("https://builder-57473-default-rtdb.firebaseio.com/default.json")
         .then((response) => {
             setIngredients(response.data.ingredients);
+            setPrice(response.data.price)
         })
     }, [])
     return ( 
