@@ -1,0 +1,17 @@
+.Logo {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 5px 25px;
+
+}
+.Logo img {
+    height: 6rem;
+    margin: .6rem;
+}
+@media (max-width:550px) {
+    .Logo  {
+        margin-left: 65px;
+        margin-top: 20px;
+    }
+}
