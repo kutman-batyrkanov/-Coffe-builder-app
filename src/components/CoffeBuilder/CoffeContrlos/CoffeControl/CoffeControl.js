@@ -5,6 +5,21 @@ const CoffeControl = ({ type }) => {
     <div className={classes.CoffeControl}>
         <button>+</button>
         <button>-</button>
+        <br></br>
+        <button>+</button>
+        <button>-</button>
+        <br></br>
+        <button>+</button>
+        <button>-</button>
+        <br></br>
+        <button>+</button>
+        <button>-</button>
+        <br></br>
+        <button>+</button>
+        <button>-</button>
+        <br></br>
+        <button>+</button>
+        <button>-</button>
     </div>
      );
 }
