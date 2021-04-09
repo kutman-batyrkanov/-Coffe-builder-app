@@ -1,0 +1,20 @@
+.CoffeControl button {
+    border: 0;
+    margin: 0 .5rem;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    background-color: rgb(90, 162, 230);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.CoffeControl button:not(:disabled):hover {
+    background-color: rgba(137, 235, 194, 0.829);
+}
+.CoffeControl button:focus {
+    outline: none;
+}
+.CoffeControl button:disabled {
+    opacity: .5;
+}
