@@ -23,8 +23,8 @@ const CoffeBuilder = () => {
     // }, [])
     return ( 
     <div className={classes.CoffeBuilder}>
-      <CoffePreview ingredients={ingredients}/>
-        <CoffeContrlos ingredients={ingredients} />
+      <CoffePreview />
+        <CoffeContrlos />
     </div>
      );
 }
