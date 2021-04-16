@@ -1,6 +1,6 @@
 import classes from "./CoffeIngredient.module.css";
 
-import americano from "../../../images/americano.svg";
+// import americano from "../../../images/americano.svg";
 
 const CoffeIngredient = ({type}) => {
     const types = {

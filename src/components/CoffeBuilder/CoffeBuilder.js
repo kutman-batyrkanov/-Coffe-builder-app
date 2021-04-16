@@ -5,15 +5,15 @@ import CoffePreview from "./CpffePreview/CoffePreview";
 import axios from "axios";
 
 const CoffeBuilder = () => {
-    const [ingredients, setIngredients] = useState({});
-    const [price, setPrice] = useState(0)
-    const prices = {
-        americano: 50,
-        cappuccino: 70,
-        latte: 70,
-        expresso: 80,
-        coldcofee: 50,
-    }
+    // const [ingredients, setIngredients] = useState({});
+    // const [price, setPrice] = useState(0)
+    // const prices = {
+    //     americano: 50,
+    //     cappuccino: 70,
+    //     latte: 70,
+    //     expresso: 80,
+    //     coldcofee: 50,
+    // }
     useEffect (() => {
         axios.get("https://builder-57473-default-rtdb.firebaseio.com/default.json")
         .then((response) => {
