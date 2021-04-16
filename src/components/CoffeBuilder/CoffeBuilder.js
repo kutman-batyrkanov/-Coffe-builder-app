@@ -14,13 +14,13 @@ const CoffeBuilder = () => {
     //     expresso: 80,
     //     coldcofee: 50,
     // }
-    useEffect (() => {
-        axios.get("https://builder-57473-default-rtdb.firebaseio.com/default.json")
-        .then((response) => {
-            setIngredients(response.data.ingredients);
-            setPrice(response.data.price)
-        })
-    }, [])
+    // useEffect (() => {
+    //     axios.get("https://builder-57473-default-rtdb.firebaseio.com/default.json")
+    //     .then((response) => {
+    //         setIngredients(response.data.ingredients);
+    //         setPrice(response.data.price)
+    //     })
+    // }, [])
     return ( 
     <div className={classes.CoffeBuilder}>
       <CoffePreview ingredients={ingredients}/>
