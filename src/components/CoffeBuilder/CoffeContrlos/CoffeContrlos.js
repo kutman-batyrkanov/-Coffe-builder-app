@@ -1,12 +1,29 @@
+import Button from "../../UI/Button/Button";
 import classes from "./CoffeContrlos.module.css";
 import CoffeControl from "./CoffeControl/CoffeControl";
 
-const CoffeContrlos = ({ ingredients }) => {
-    const result = [];
+const CoffeContrlos = ({ ingredients, addedIngredients, removeIngredints, finishOrder }) => {
+  const results = [];
+    let total = 0;
     for (const ingredient in ingredients) {
-        result.push(<CoffeControl type={ingredient} />)
+        total += ingredients[ingredient];
+
+        results.push(<CoffeControl type={ingredient} addedIngredients={addedIngredients} removeIngredints={removeIngredints} count={ingredients[ingredient]} />)
     }
-  return <div className={classes.CoffeControlos}>{result}</div>;
+  // const result = [];
+  // const total = 0;
+  // for (const ingredient in ingredients) {
+  //   total += ingredients[ingredient];
+  //   result.push(<CoffeControl type={ingredient} />);
+  // }
+  return (
+    <div className={classes.CoffeControlos}>
+      {results}
+      <div className={classes.Button}>
+        <Button disabled={!total} onClick={finishOrder}>Order</Button>
+      </div>
+    </div>
+  );
 };
 
 export default CoffeContrlos;
