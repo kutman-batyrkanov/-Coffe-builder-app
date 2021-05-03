@@ -1,20 +1,15 @@
-.CoffeControl button {
-    border: 0;
+.CoffeControl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem 0;
+    
+}
+.CoffeControl .ingredient div {
+    position: static;
     margin: 0 .5rem;
-    padding: 0 1rem;
-    border-radius: 1rem;
-    background-color: rgb(90, 162, 230);
+  }
+.CoffeControl div button:hover{
+    background-color: rgb(12, 204, 204);
     color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-.CoffeControl button:not(:disabled):hover {
-    background-color: rgba(137, 235, 194, 0.829);
-}
-.CoffeControl button:focus {
-    outline: none;
-}
-.CoffeControl button:disabled {
-    opacity: .5;
 }
