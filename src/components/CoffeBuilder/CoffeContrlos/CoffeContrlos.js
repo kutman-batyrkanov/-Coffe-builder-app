@@ -2,7 +2,7 @@ import Button from "../../UI/Button/Button";
 import classes from "./CoffeContrlos.module.css";
 import CoffeControl from "./CoffeControl/CoffeControl";
 
-const CoffeContrlos = ({ ingredients, addedIngredients, removeIngredints, finishOrder }) => {
+const CoffeContrlos = ({ ingredients, addedIngredients, removeIngredints, startOrdering }) => {
   const results = [];
     let total = 0;
     for (const ingredient in ingredients) {
@@ -20,7 +20,7 @@ const CoffeContrlos = ({ ingredients, addedIngredients, removeIngredints, finish
     <div className={classes.CoffeControlos}>
       {results}
       <div className={classes.Button}>
-        <Button disabled={!total} onClick={finishOrder}>Order</Button>
+        <Button disabled={!total} onClick={() =>startOrdering()}>Order</Button>
       </div>
     </div>
   );
