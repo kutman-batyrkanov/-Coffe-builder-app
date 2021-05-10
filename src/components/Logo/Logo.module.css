@@ -6,8 +6,8 @@
 
 }
 .Logo img {
-    height: 6rem;
-    margin: .6rem;
+    height: 4.5rem;
+    margin: .5rem;
 }
 @media (max-width:550px) {
     .Logo  {
