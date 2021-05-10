@@ -5,10 +5,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import builder from "./store/reducers/builder";
-
 
 const store = createStore(builder, applyMiddleware(thunk));
 
@@ -19,7 +18,7 @@ ReactDOM.render(
         <App />
       </BrowserRouter>
     </Provider>
-  </React.StrictMode>,  
+  </React.StrictMode>,
   document.getElementById("root")
 );
 

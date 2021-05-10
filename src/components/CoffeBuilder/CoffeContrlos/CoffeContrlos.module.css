@@ -1,15 +1,14 @@
 .CoffeControlos {
-    flex: 0 0 250px;
-    border-radius: 1rem;
-    padding: 1rem;
-    background-color: rgb(13, 103, 163);
-    color: white;
-    min-height: 250px;
-    height: 100%;
-    text-align: center;
-   
-  }
+  flex: 0 0 250px;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: rgb(13, 103, 163);
+  color: white;
+  min-height: 250px;
+  height: 100%;
+  text-align: center;
+}
 /* .Button{ */
-  /* display: flex; */
-  /* justify-content: center; */
+/* display: flex; */
+/* justify-content: center; */
 /* } */

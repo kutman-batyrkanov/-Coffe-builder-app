@@ -36,7 +36,7 @@ const CoffeBuilder = ({ history }) => {
       .then(() => {
         setOrdering(false);
         // loadDefaults();
-        history.push("/checout");
+        history.push("/checkout");
       });
   }
   function startOrdering() {

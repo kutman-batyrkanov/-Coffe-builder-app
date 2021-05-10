@@ -4,16 +4,15 @@ import Toolbar from "../Toolbar.js/Toolbar";
 import classes from "./Layout.module.css";
 
 const Layout = ({ children }) => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
-    const [drawerOpen, setDrawerOpen] = useState(false)
-
-    return ( 
+  return (
     <div className={classes.Layout}>
-        <Toolbar openDrawer={() => setDrawerOpen(true)} />
-        <Drawer open={drawerOpen} closeDrawer={() => setDrawerOpen(false)} />
-        {children}
+      <Toolbar openDrawer={() => setDrawerOpen(true)} />
+      <Drawer open={drawerOpen} closeDrawer={() => setDrawerOpen(false)} />
+      {children}
     </div>
-     );
-}
- 
+  );
+};
+
 export default Layout;

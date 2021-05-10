@@ -1,8 +1,8 @@
 import classes from "./OrderSummary.module.css";
 const OrderSummary = ({ ingredients, price }) => {
   const labels = {
-    americano:'americano',
-     cappuccino:"cappuccino",
+    americano: "americano",
+    cappuccino: "cappuccino",
   };
   const result = Object.keys(ingredients).map((type) => (
     <ul>

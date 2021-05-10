@@ -1,17 +1,16 @@
 .Logo {
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    padding: 5px 25px;
-
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 5px 25px;
 }
 .Logo img {
-    height: 4.5rem;
-    margin: .5rem;
+  height: 4.5rem;
+  margin: 0.5rem;
 }
-@media (max-width:550px) {
-    .Logo  {
-        margin-left: 65px;
-        margin-top: 20px;
-    }
+@media (max-width: 550px) {
+  .Logo {
+    margin-left: 65px;
+    margin-top: 20px;
+  }
 }
