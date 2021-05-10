@@ -1,7 +1,7 @@
 import CoffeIngredient from "../CoffeIngredient/CoffeIngredient";
 import classes from "./CoffePreview.module.css";
 
-const CoffePreview = ({ ingredients, }) => {
+const CoffePreview = ({ ingredients, price}) => {
     const result = [];
 
     for (const ingredient in ingredients) {
@@ -12,6 +12,7 @@ const CoffePreview = ({ ingredients, }) => {
     return ( 
     <div className={classes.CoffePreview}>
         <div className={classes.color}>{result}</div>
+        {price}
     </div>
      );
 }
