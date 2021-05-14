@@ -8,9 +8,11 @@ import { BrowserRouter } from "react-router-dom";
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import builder from "./store/reducers/builder";
+import orders from "./store/reducers/orders"
 
-const store = createStore(builder, applyMiddleware(thunk));
-
+const rootReducer = combineReducers({ builder, orders });
+const store = createStore(rootReducer, applyMiddleware(thunk) )  
+ 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
