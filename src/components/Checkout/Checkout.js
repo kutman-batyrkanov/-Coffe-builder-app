@@ -1,40 +1,40 @@
 import classes from "./Checkout.module.css";
 import CoffePreview from "../CoffeBuilder/CpffePreview/CoffePreview";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
-import axios from "axios";
+import axios from "../../axios";
+import { useSelector } from "react-redux";
+import withAxios from "../withAxios";
+
 
 const Checkout = ({ history }) => {
+  const ingredients = useSelector(state => state.builder.ingredients);
+  const price = useSelector(state => state.builder.price);
+
   function cancelCallback() {
-    history.replace("/");
+    history.replace('/');
   }
+
   function submitCallback(event) {
     const data = new FormData(event.target);
 
-    axios
-      .post("https://builder-57473-default-rtdb.firebaseio.com/dafault.json", {
-        name: data.get("name"),
-        address: data.get("address"),
-        phone: data.get("phone"),
-        ingredients: {
-          americano: 10,
-          cappuccino: 10,
-        },
-        price: 100,
-      })
-      .then((response) => {
-        history.replace("/");
-      });
+    axios.post('/orders.json', {
+      name: data.get('name'),
+      address: data.get('address'),
+      phone: data.get('phone'),
+      ingredients: ingredients,
+      price: price,
+    }).then(response => {
+      history.replace('/');
+    });
+
     event.preventDefault();
   }
 
   return (
     <div className={classes.Checkout}>
       <CoffePreview
-        ingredients={{
-          americano: 5,
-          cappuccino: 10,
-        }}
-        price={150}
+         ingredients={ingredients} 
+        price={price}
       />
       <CheckoutForm
         cancelCallback={cancelCallback}
@@ -44,4 +44,4 @@ const Checkout = ({ history }) => {
   );
 };
 
-export default Checkout;
+export default withAxios (Checkout, axios);
