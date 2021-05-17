@@ -10,7 +10,7 @@
 }
 @media (max-width: 550px) {
   .Logo {
-    margin-left: 65px;
+    margin: auto;
     margin-top: 20px;
   }
 }
