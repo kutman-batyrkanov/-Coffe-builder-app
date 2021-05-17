@@ -6,13 +6,13 @@ const CoffePreview = ({ ingredients, price }) => {
 
   for (const ingredient in ingredients) {
     for (let i = 0; i < ingredients[ingredient]; i++) {
-      result.push(<CoffeIngredient type={ingredient} />);
+      result.push(<CoffeIngredient key={ingredient + i} type={ingredient} />);
     }
   }
   return (
     <div className={classes.CoffePreview}>
       <div className={classes.color}>{result}</div>
-      {price}
+        {price.toFixed(1)} som 
     </div>
   );
 };
