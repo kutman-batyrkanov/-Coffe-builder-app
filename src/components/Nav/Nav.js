@@ -7,7 +7,6 @@ const Nav = () => {
       <NavItem url="/" exact>
         Bulder
       </NavItem>
-      {/* <NavItem url="/checout">Checkout</NavItem> */}
       <NavItem url="/orders">Orders</NavItem>
     </ul>
   );
