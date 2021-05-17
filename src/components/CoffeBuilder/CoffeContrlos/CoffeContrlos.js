@@ -4,8 +4,6 @@ import CoffeControl from "./CoffeControl/CoffeControl";
 
 const CoffeContrlos = ({
   ingredients,
-  addedIngredients,
-  removeIngredints,
   startOrdering,
 }) => {
   const results = [];
@@ -15,9 +13,8 @@ const CoffeContrlos = ({
 
     results.push(
       <CoffeControl
+        key={ingredient}
         type={ingredient}
-        addedIngredients={addedIngredients}
-        removeIngredints={removeIngredints}
         count={ingredients[ingredient]}
       />
     );
@@ -30,6 +27,7 @@ const CoffeContrlos = ({
   // }
   return (
     <div className={classes.CoffeControlos}>
+      <strong>Ingredients</strong>
       {results}
       <div className={classes.Button}>
         <Button disabled={!total} onClick={() => startOrdering()}>
