@@ -5,6 +5,7 @@ import latte from "../../../images/latte.png";
 import smooth from "../../../images/smooth.png";
 import strcoffe from "../../../images/strcoffe.png";
 import coldcoffe from "../../../images/coldcoffe.png";
+import React from "react";
 
 const CoffeIngredient = ({ type }) => {
   const types = {
@@ -51,7 +52,8 @@ const CoffeIngredient = ({ type }) => {
       marginTop: "10px",
     },
   };
+
   return <div className={classes.CoffeIngredient} style={types[type]}></div>;
 };
 
-export default CoffeIngredient;
+export default React.memo (CoffeIngredient);
