@@ -5,12 +5,10 @@ const Button = (props) => {
   if (props.green) {
     className.push(classes.green);
   }
+
   return (
-    <div>
-      <button {...props} className={className.join(" ")}>
-        {props.children}
-      </button>
-    </div>
+    <button {...props} className={className.join(' ')}>{props.children}</button>
   );
-};
+}
+
 export default Button;
