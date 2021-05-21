@@ -12,6 +12,7 @@ import withAxios from "../withAxios";
 
 const CoffeBuilder = ({ history }) => {
   const dispatch = useDispatch();
+  const isAuthenticated = useSelector(state => state.auth.token !== null);
   const ingredients = useSelector((state) => state.builder.ingredients);
   const price = useSelector((state) => state.builder.price);
   const [ordering, setOrdering] = useState(false);
@@ -32,11 +33,18 @@ const CoffeBuilder = ({ history }) => {
   // }
 
   function startOrdering() {
-    setOrdering(true);
+    if(isAuthenticated) {
+      setOrdering(true);
+    }
+    else {
+      history.push('./auth');
+    }
   }
+
   function stopOrdering() {
     setOrdering(false);
   }
+  
   function finishOrdering() {
     setOrdering(false);
     // loadDefaults();
