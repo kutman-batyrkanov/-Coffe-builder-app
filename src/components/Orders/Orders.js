@@ -5,6 +5,7 @@ import { load } from "../../store/actions/orders";
 import Order from "./Order/Order";
 import classes from "./Orders.module.css";
 import withAxios from "../withAxios";
+import Loading from "../../Loading/Loading";
 
 const Orders = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const Orders = () => {
 
   return (
     <div className={classes.Orders}>
-      {results}
+      {results.length > 0 ? results : <Loading />}
     </div>
   );
 }
