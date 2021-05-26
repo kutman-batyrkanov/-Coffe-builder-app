@@ -2,20 +2,32 @@ import classes from "./Order.module.css";
 
 const Order = ({ name, phone, address, ingredients, price }) => {
   const outputIngredients = Object.keys(ingredients).map((ingredient) => (
-    <em key={ingredient}>
-      {ingredient} - {ingredients[ingredient]}
-    </em>
+    <li key={ingredient}>
+      {ingredient} - {ingredients [ingredient]}
+    </li>
   ));
 
   return (
+    <div className={classes.divorder}>
     <div className={classes.Order}>
-      <div className={classes.test}>
-        <h1>{name}</h1>
-        <span>{phone}</span>
-        <h5>{address}</h5>
+      <h2>ingredients</h2>
+      <hr className={classes.hr} />
+      <div>
+        Name: {name}
       </div>
-      <div>{outputIngredients}</div>
-      <strong>{price}som</strong>
+      <div>
+        Phone: {phone}
+      </div>
+      <div>
+        Address: {address}
+      </div>
+      <hr className={classes.hr} />
+      <div className={classes.divul}>
+      <ul>{outputIngredients}</ul>
+      </div>
+      <hr />
+      <strong>Price: {price}</strong>
+    </div>
     </div>
   );
 };
