@@ -7,7 +7,7 @@
   padding-top: 10px;
   font-size: 26px;
   color: white;
-  background-color: rgb(45, 164, 211);
+  background-color: rgba(235, 186, 81, 0.74);
   transition: transform 0.3s ease-out;
 }
 .Drawer {

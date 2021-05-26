@@ -7,8 +7,8 @@ const Nav = () => {
   return (
     <ul className={classes.Nav}>
       <NavItem url="/" exact>Bulder</NavItem>
-      <NavItem url="/auht" exact>Login</NavItem>
-      {/* {isAuthenticated ? <NavItem url="/auth">Login</NavItem> : null} */}
+      {/* <NavItem url="/auth" exact>Login</NavItem> */}
+      {!isAuthenticated ? <NavItem url="/auth">Login</NavItem> : null}
       {isAuthenticated ? <NavItem url="/orders">Orders</NavItem> : null}
       {isAuthenticated ? <NavItem url="/logout">Logout</NavItem> : null}
     </ul>

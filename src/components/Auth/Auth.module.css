@@ -1,7 +1,8 @@
 .Auth {
-    margin-top: 15px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-}
+    justify-content: space-evenly;
+    margin: 0 auto;
+    min-width: 250px;
+    min-height: 220px;
+  }

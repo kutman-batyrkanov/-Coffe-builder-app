@@ -23,7 +23,7 @@ function App() {
     <Switch>
       <Route path="/" exact component={CoffeBuilder} />
       <Route path="/auth"  component={Auth} />
-      <Redirect to="/auth" />
+      <Redirect to="/" />
     </Switch>
   );
   if (isAuthenticated) {

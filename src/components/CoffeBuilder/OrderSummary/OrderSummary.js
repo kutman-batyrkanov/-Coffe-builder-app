@@ -10,15 +10,17 @@ const OrderSummary = ({ ingredients, price }) => {
     strcoffe: "strcoffe",
   };
   const result = Object.keys(ingredients).map((type) => (
-    <ul key={type}>
+    <li key={type}>
       {labels[type]}: {ingredients[type]}
-    </ul>
+    </li>
   ));
   return (
+    <div className={classes.ord}>
     <div className={classes.OrderSummary}>
       <h3>Order Summary</h3>
       <ul className={classes.ul}>{result}</ul>
       <strong>Total price : {price.toFixed(1)} som </strong>
+    </div>
     </div>
   );
 };
