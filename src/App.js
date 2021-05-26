@@ -41,7 +41,6 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <h1>Coffe Builder</h1>
         {routesOutput}
       </Layout>
     </div>
