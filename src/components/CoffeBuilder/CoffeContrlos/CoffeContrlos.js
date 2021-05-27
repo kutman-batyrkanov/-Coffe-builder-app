@@ -27,7 +27,7 @@ const CoffeContrlos = ({
   // }
   return (
     <div className={classes.CoffeControlos}>
-      <strong>Ingredients</strong>
+      <strong>Coffee</strong>
       {results}
       <div className={classes.Button}>
         <Button disabled={!total} onClick={() => startOrdering()}>
