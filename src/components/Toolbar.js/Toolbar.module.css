@@ -1,10 +1,12 @@
 .Toolbar {
+  height: 70px;
   display: flex;
   align-items: center;
   padding: 10px;
   color: black;
   margin-bottom: 15px;
-  background-color: rgba(202, 135, 26, 0.644);
+  background: linear-gradient(170deg, #ebde30 -17.33%, rgba(74, 153, 211, 0) 75.91%),
+  linear-gradient(-45deg, rgba(202, 135, 26, 0.644), rgba(202, 135, 26, 0.644));
   position: sticky;
   top: 0;
   left: 0;
