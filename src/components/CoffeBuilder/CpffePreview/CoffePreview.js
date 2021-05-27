@@ -1,6 +1,6 @@
 import CoffeIngredient from "../CoffeIngredient/CoffeIngredient";
 import classes from "./CoffePreview.module.css";
-import shelf from "../../../images/shelf.png";
+import shelf from '../../../images/shelf.png';
 
 const CoffePreview = ({ ingredients, price }) => {
   const result = [];
