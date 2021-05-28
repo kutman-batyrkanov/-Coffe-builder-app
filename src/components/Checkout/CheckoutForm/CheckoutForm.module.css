@@ -14,12 +14,34 @@
   margin-right: 1rem;
 }
 .CheckoutForm > div > input {
-  border-radius: 1rem;
-  border: 1px solid lightgray;
+  border-radius: 0.8rem;
+  border: 1px solid rgb(26, 196, 181);
   font-size: 1.5rem;
-  padding: 0 1rem;
+  padding: 8px;
 }
 .CheckoutForm > div > input:focus {
   outline: none;
-  border-color: darkgray;
+  border-color: rgb(67, 199, 34);
+}
+.Button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.name {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.address {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.phone {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
 }
