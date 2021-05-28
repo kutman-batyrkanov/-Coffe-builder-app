@@ -28,11 +28,13 @@ export default withAxios(() => {
     formOutput = (
       <form onSubmit={formSubmitted}>
         <h1>Welcome</h1>
-        <input type="email" placeholder="E-mail" name="email" required />
-        <input type="password" placeholder="Password" name="password" required minLength="6" />
+        <div className={classes.input}>
+        <input className={classes.input1} type="email" placeholder="E-mail" name="email" required />
+        <input className={classes.input2}type="password" placeholder="Password" name="password" required minLength="6" />
+        </div>
         <div className={classes.Buttons}>
-        <Button green>Sign in</Button>
-        <Button red>Sign up</Button>
+          <div className={classes.signin}><Button  green>Sign in</Button></div>
+          <div className={classes.signup}><Button  red>Sign up</Button></div>
         </div>
       </form>
     );
