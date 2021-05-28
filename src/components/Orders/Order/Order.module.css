@@ -23,3 +23,11 @@
     margin: 0;
     text-align: center;
   }
+  .div{
+      display: flex;
+      align-items: center;
+  }
+  .divorder {
+      margin-top: 15px;
+      background-color: #f3eb9f;
+  }
