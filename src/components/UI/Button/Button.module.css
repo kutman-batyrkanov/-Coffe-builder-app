@@ -13,7 +13,7 @@
   align-items: center;
 }
 .Button:not(:disabled):hover {
-  background-color: rgb(219, 53, 81);
+  background-color: rgb(240, 243, 51);
 }
 .Button:focus {
   outline: none;
