@@ -10,8 +10,9 @@ const Order = ({ name, phone, address, ingredients, price }) => {
   return (
     <div className={classes.divorder}>
     <div className={classes.Order}>
-      <h2>ingredients</h2>
+      <h2>Orders</h2>
       <hr className={classes.hr} />
+      <div className={classes.div}>
       <div>
         Name: {name}
       </div>
@@ -21,6 +22,8 @@ const Order = ({ name, phone, address, ingredients, price }) => {
       <div>
         Address: {address}
       </div>
+      </div>
+     
       <hr className={classes.hr} />
       <div className={classes.divul}>
       <ul>{outputIngredients}</ul>
