@@ -1,7 +1,8 @@
 .CoffePreview {
+  margin-top: 20px;
   width: 450px;
   max-width: 450px;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   border-radius: 20px;
   background-color: rgba(184, 132, 55, 0.924);
   padding: 10px;
