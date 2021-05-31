@@ -25,3 +25,9 @@
   font-size: 25px;
   font-weight: bold;
 }
+@media (max-width: 500px) {
+  .CoffePreview {
+    margin-right: 0rem;
+    margin-bottom: 15px;
+  }
+}
